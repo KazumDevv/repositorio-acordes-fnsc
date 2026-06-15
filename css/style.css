@@ -127,6 +127,9 @@ button, input {
   color: var(--muted);
 }
 
+.suggestions:not(:empty) {
+  display: grid;
+}
 .fundamentals {
   display: flex;
   gap: 10px;
