@@ -163,7 +163,9 @@ function renderCatalogPage() {
   title.textContent = meta.title;
   subtitle.textContent = meta.subtitle;
 
-  const items = chords.filter((chord) => chord.fundamental === fundamental);
+  const items = chords.filter((chord) =>
+    chord.fundamental.includes(fundamental)
+  );
 
   if (!items.length) {
     grid.innerHTML = `<p class="empty-state">Nenhum acorde cadastrado para esta categoria.</p>`;
