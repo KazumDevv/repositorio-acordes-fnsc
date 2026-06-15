@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Repositório de Acordes FNSC</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <header class="topbar">
+        <div class="brand">
+            <a href="index.html" class="brand__link">
+                <span class="brand__logo">♪</span>
+                <span class="brand__text">Repositorio de acordes fnsc</span>
+            </a>
+        </div>
+
+        <div class="topbar__actions">
+            <button class="icon-btn mobile-only" id="searchToggle" aria-label="Abrir pesquisa">⌕</button>
+            <button class="icon-btn mobile-only" id="menuToggle" aria-label="Abrir menu">☰</button>
+        </div>
+
+        <div class="search-wrap desktop-only">
+            <input id="searchInput" class="search-input" type="search" placeholder="Pesquisar acordes..."
+                autocomplete="off" />
+            <div id="suggestions" class="suggestions" aria-live="polite"></div>
+        </div>
+    </header>
+
+    <div class="mobile-search" id="mobileSearch">
+        <div class="search-wrap">
+            <input id="searchInputMobile" class="search-input" type="search" placeholder="Pesquisar acordes..."
+                autocomplete="off" />
+            <div id="suggestionsMobile" class="suggestions" aria-live="polite"></div>
+        </div>
+    </div>
+
+    <nav class="fundamentals desktop-only" id="fundamentalsNav">
+        <a href="acordes.html?fundamental=C">Dó</a>
+        <a href="acordes.html?fundamental=D">Ré</a>
+        <a href="acordes.html?fundamental=E">Mi</a>
+        <a href="acordes.html?fundamental=F">Fá</a>
+        <a href="acordes.html?fundamental=G">Sol</a>
+        <a href="acordes.html?fundamental=A">Lá</a>
+        <a href="acordes.html?fundamental=B">Si</a>
+    </nav>
+
+    <main class="home-hero">
+        <section class="hero-card">
+            <h1>Repositório de Acordes FNSC</h1>
+            <p>Busque um acorde, abra a sugestão e veja a imagem correspondente. No menu abaixo, clique no acorde
+                fundamental para ver suas variações.</p>
+        </section>
+    </main>
+
+    <aside class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+        <div class="drawer__header">
+            <strong>Menu</strong>
+            <button class="icon-btn" id="closeMenu" aria-label="Fechar menu">✕</button>
+        </div>
+        <a href="acordes.html?fundamental=C">Dó</a>
+        <a href="acordes.html?fundamental=D">Ré</a>
+        <a href="acordes.html?fundamental=E">Mi</a>
+        <a href="acordes.html?fundamental=F">Fá</a>
+        <a href="acordes.html?fundamental=G">Sol</a>
+        <a href="acordes.html?fundamental=A">Lá</a>
+        <a href="acordes.html?fundamental=B">Si</a>
+    </aside>
+
+    <div class="overlay" id="overlay"></div>
+
+    <dialog class="chord-dialog" id="chordDialog">
+        <div class="dialog__header">
+            <strong id="dialogTitle">Acorde</strong>
+            <button class="icon-btn" id="closeDialog" aria-label="Fechar">✕</button>
+        </div>
+        <img id="dialogImage" alt="Acorde selecionado" />
+        <p id="dialogCaption"></p>
+    </dialog>
+
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

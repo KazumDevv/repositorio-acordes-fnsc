@@ -1,0 +1,348 @@
+:root {
+  --bg: #0b1020;
+  --panel: #121933;
+  --panel-2: #182144;
+  --text: #f5f7ff;
+  --muted: #aeb8da;
+  --line: rgba(255, 255, 255, 0.10);
+  --accent: #7c9cff;
+  --accent-2: #95ffd6;
+  --shadow: 0 18px 50px rgba(0, 0, 0, 0.28);
+  --radius: 18px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  min-height: 100%;
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  background: radial-gradient(circle at top, #17204a 0%, var(--bg) 55%);
+  color: var(--text);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button, input {
+  font: inherit;
+}
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 18px;
+  background: rgba(11, 16, 32, 0.9);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+}
+
+.brand {
+  flex: 0 0 auto;
+}
+
+.brand__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 800;
+}
+
+.brand__logo {
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: #081021;
+}
+
+.brand__text {
+  font-size: 1rem;
+  letter-spacing: 0.2px;
+}
+
+.search-wrap {
+  position: relative;
+  flex: 1;
+  max-width: 760px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  outline: none;
+  background: rgba(255,255,255,0.06);
+  color: var(--text);
+  box-shadow: var(--shadow);
+}
+
+.search-input::placeholder {
+  color: var(--muted);
+}
+
+.suggestions {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: calc(100% + 8px);
+  display: grid;
+  gap: 8px;
+  z-index: 30;
+}
+
+.suggestion {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: rgba(18, 25, 51, 0.98);
+  color: var(--text);
+  text-align: left;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+}
+
+.suggestion span {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.suggestion--empty {
+  cursor: default;
+  color: var(--muted);
+}
+
+.fundamentals {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  padding: 14px 18px 0;
+}
+
+.fundamentals a {
+  padding: 10px 16px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid var(--line);
+}
+
+.fundamentals a:hover,
+.fundamentals a:focus-visible {
+  background: rgba(124, 156, 255, 0.18);
+}
+
+.home-hero,
+.catalog-page {
+  width: min(1180px, calc(100% - 24px));
+  margin: 0 auto;
+  padding: 24px 0 40px;
+}
+
+.hero-card,
+.catalog-header,
+.chord-card,
+.chord-dialog {
+  background: rgba(18, 25, 51, 0.78);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.hero-card {
+  padding: 28px;
+}
+
+.hero-card h1,
+.catalog-header h1 {
+  margin: 0 0 10px;
+  font-size: clamp(1.6rem, 2.6vw, 2.5rem);
+}
+
+.hero-card p,
+.catalog-header p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.catalog-header {
+  padding: 22px;
+  margin-bottom: 20px;
+}
+
+.chord-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 16px;
+}
+
+.chord-card__button {
+  width: 100%;
+  padding: 14px;
+  display: grid;
+  gap: 10px;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+}
+
+.chord-card img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 14px;
+  background: #0a0f1c;
+  border: 1px solid var(--line);
+}
+
+.chord-card strong {
+  font-size: 1rem;
+}
+
+.chord-card span {
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.icon-btn {
+  appearance: none;
+  border: 0;
+  cursor: pointer;
+  width: 42px;
+  height: 42px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text);
+}
+
+.topbar__actions {
+  display: flex;
+  gap: 10px;
+  margin-left: auto;
+}
+
+.mobile-only { display: none; }
+.desktop-only { display: block; }
+
+.mobile-search {
+  display: none;
+  padding: 0 18px 16px;
+}
+
+.mobile-search.is-open {
+  display: block;
+}
+
+.mobile-drawer {
+  position: fixed;
+  top: 0;
+  right: -320px;
+  width: min(320px, 86vw);
+  height: 100vh;
+  z-index: 40;
+  padding: 16px;
+  background: rgba(12, 18, 38, 0.98);
+  border-left: 1px solid var(--line);
+  transition: right 0.25s ease;
+  box-shadow: var(--shadow);
+}
+
+.mobile-drawer.is-open {
+  right: 0;
+}
+
+.drawer__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.mobile-drawer a {
+  display: block;
+  padding: 14px 12px;
+  border-radius: 14px;
+  border: 1px solid var(--line);
+  margin-bottom: 10px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 35;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.overlay.is-open {
+  display: block;
+}
+
+.chord-dialog {
+  width: min(620px, calc(100% - 24px));
+  border: 1px solid var(--line);
+  padding: 16px;
+  color: var(--text);
+}
+
+.chord-dialog::backdrop {
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.dialog__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.chord-dialog img {
+  width: 100%;
+  max-height: 70vh;
+  object-fit: contain;
+  border-radius: 14px;
+  background: #0a0f1c;
+  border: 1px solid var(--line);
+}
+
+.chord-dialog p {
+  margin: 12px 0 0;
+  color: var(--muted);
+}
+
+.empty-state {
+  color: var(--muted);
+  padding: 20px;
+}
+
+@media (max-width: 860px) {
+  .desktop-only { display: none; }
+  .mobile-only { display: inline-grid; place-items: center; }
+  .topbar { justify-content: space-between; }
+  .brand__text { font-size: 0.95rem; }
+  .home-hero, .catalog-page { width: min(1180px, calc(100% - 18px)); }
+}
+
+@media (max-width: 560px) {
+  .topbar { padding: 12px; }
+  .brand__text { font-size: 0.88rem; }
+  .hero-card, .catalog-header { padding: 18px; }
+  .chord-grid { grid-template-columns: repeat(auto-fit, minmax(145px, 1fr)); }
+}

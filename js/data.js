@@ -1,0 +1,147 @@
+// Banco de dados dos acordes
+// Adicione aqui novos acordes e novas variações conforme for criando as imagens.
+
+window.CHORDS = [
+    {
+        id: "C",
+        fundamental: "C",
+        label: "Dó",
+        aliases: ["do", "dó", "c"],
+        image: "assets/acordes/C-Do.webp",
+    },
+    {
+        id: "C#",
+        fundamental: "C",
+        label: "Dó#",
+        aliases: ["do#", "dó#", "c#", "re bemol", "reb"],
+        image: "assets/acordes/C#-Do#.webp",
+    },
+    {
+        id: "Db",
+        fundamental: "C",
+        label: "Dó bemol",
+        aliases: ["dob", "do bemol", "db"],
+        image: "assets/acordes/Db-Dob.webp",
+    },
+    {
+        id: "Cm",
+        fundamental: "C",
+        label: "Dó menor",
+        aliases: ["dom", "do menor", "cm"],
+        image: "assets/acordes/C-Dom.webp",
+    },
+    {
+        id: "C7",
+        fundamental: "C",
+        label: "Dó 7",
+        aliases: ["do7", "c7"],
+        image: "assets/acordes/C-Do7.webp",
+    },
+    {
+        id: "CM7",
+        fundamental: "C",
+        label: "Dó maior 7",
+        aliases: ["domaj7", "do maior 7", "cmaj7", "cM7"],
+        image: "assets/acordes/C-DoM7.webp",
+    },
+    {
+        id: "Cm7",
+        fundamental: "C",
+        label: "Dó menor 7",
+        aliases: ["dom7", "do menor 7", "cm7"],
+        image: "assets/acordes/C-Dom7.webp",
+    },
+    {
+        id: "C9",
+        fundamental: "C",
+        label: "Dó 9",
+        aliases: ["do9", "c9"],
+        image: "assets/acordes/C-Do9.webp",
+    },
+
+    {
+        id: "D",
+        fundamental: "D",
+        label: "Ré",
+        aliases: ["re", "ré", "d"],
+        image: "assets/acordes/D-Re.webp",
+    },
+    {
+        id: "D#",
+        fundamental: "D",
+        label: "Ré#",
+        aliases: ["re#", "ré#", "d#", "eb"],
+        image: "assets/acordes/D-Re#.webp",
+    },
+    {
+        id: "Db2",
+        fundamental: "D",
+        label: "Ré bemol",
+    },
+    {
+        id: "E",
+        fundamental: "E",
+        label: "Mi",
+        aliases: ["mi", "e"],
+        image: "assets/acordes/E-Mi.webp",
+    },
+    {
+        id: "F",
+        fundamental: "F",
+        label: "Fá",
+        aliases: ["fa", "fá", "f"],
+        image: "assets/acordes/F-Fa.webp",
+    },
+    {
+        id: "F#",
+        fundamental: "F",
+        label: "Fá#",
+        aliases: ["fa#", "fá#", "gb"],
+        image: "assets/acordes/F#-Fa#.webp",
+    },
+    {
+        id: "Gb",
+        fundamental: "F",
+        label: "Sol bemol",
+        aliases: ["solb", "sol bemol", "gb"],
+        image: "assets/acordes/Gb-Solb.webp",
+    },
+    {
+        id: "G",
+        fundamental: "G",
+        label: "Sol",
+        aliases: ["sol", "g"],
+        image: "assets/acordes/G-Sol.webp",
+    },
+    {
+        id: "A",
+        fundamental: "A",
+        label: "Lá",
+        aliases: ["la", "lá", "a"],
+        image: "assets/acordes/A-La.webp",
+    },
+    {
+        id: "Bb",
+        fundamental: "A",
+        label: "Si bemol",
+        aliases: ["sib", "si bemol", "bb"],
+        image: "assets/acordes/Bb-Sib.webp",
+    },
+    {
+        id: "B",
+        fundamental: "B",
+        label: "Si",
+        aliases: ["si", "b"],
+        image: "assets/acordes/B-Si.webp",
+    },
+];
+
+window.FUNDAMENTAL_MAP = {
+    C: { title: "Dó", subtitle: "Variações de Dó, Dó# e Dó bemol" },
+    D: { title: "Ré", subtitle: "Variações de Ré, Ré# e Ré bemol" },
+    E: { title: "Mi", subtitle: "Variações de Mi e suas extensões" },
+    F: { title: "Fá", subtitle: "Variações de Fá, Fá# e Sol bemol" },
+    G: { title: "Sol", subtitle: "Variações de Sol" },
+    A: { title: "Lá", subtitle: "Variações de Lá, Si bemol e relacionadas" },
+    B: { title: "Si", subtitle: "Variações de Si" },
+};
